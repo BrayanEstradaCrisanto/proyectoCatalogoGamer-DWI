@@ -16,7 +16,12 @@
     <main class="container">
         <header class="nosotros-header">
             <h2>Sobre Nosotros</h2>
-            <img src="img/nosotros-banner.jpg" alt="Ecosistema Gaming" class="banner-img">
+
+            <!-- Apartado exclusivo Ecosistema Gaming con su icono GIF -->
+            <div class="ecosistema-container">
+                <img src="img/iconoNosotros.gif" alt="Gamer GIF" class="nosotros-icon">
+                <span class="ecosistema-text">Ecosistema Gaming</span>
+            </div>
         </header>
 
         <section class="content-grid">
@@ -24,10 +29,12 @@
                 <h3>Nuestra Historia</h3>
                 <p>Nacimos en 2026 con el firme propósito de romper esquemas en la organización y análisis de la industria gaming, centralizando los títulos más icónicos en un entorno de alta fidelidad digital.</p>
             </article>
+
             <article class="card">
                 <h3>Misión</h3>
                 <p>Proporcionar un espacio web interactivo y agresivo que conecte a los usuarios con los datos más competitivos y populares del mercado actual de videojuegos.</p>
             </article>
+
             <article class="card">
                 <h3>Visión</h3>
                 <p>Ser el catálogo de referencia internacional para la comunidad de desarrolladores y jugadores, expandiendo nuestras conexiones asíncronas con servidores globales.</p>
