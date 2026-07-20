@@ -1,4 +1,4 @@
-/* Configuración General (Basada en el Login) */
+/* Configuración General */
 * {
     margin: 0;
     padding: 0;
@@ -7,7 +7,7 @@
 }
 
 body {
-    background-color: #0d0d0d; /* Mismo fondo que el login */
+    background-color: #0d0d0d;
     color: #ffffff;
     min-height: 100vh;
     display: flex;
@@ -16,12 +16,12 @@ body {
 
 /* Estilos del Menú Principal */
 header {
-    background-color: #1a1a1a; /* Mismo color que la tarjeta del login */
+    background-color: #1a1a1a;
     padding: 20px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-bottom: 3px solid #ff0055; /* Borde rosa neón */
+    border-bottom: 3px solid #ff0055;
     box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
 }
 
@@ -31,7 +31,7 @@ header {
     color: #fff;
     text-transform: uppercase;
     letter-spacing: 2px;
-    text-shadow: 0 0 10px #ff0055; /* Efecto neón del título */
+    text-shadow: 0 0 10px #ff0055;
 }
 
 nav ul {
@@ -51,18 +51,20 @@ nav ul li a {
 }
 
 nav ul li a:hover, nav ul li a.active {
-    color: #00d4ff; /* Color cian neón al pasar el mouse */
+    color: #00d4ff;
     text-shadow: 0 0 8px #00d4ff;
 }
 
-/* Estilos de la Sección de Inicio (Hero) */
+/* Estilos del Main (Apilado vertical) */
 main {
     flex: 1;
     display: flex;
-    align-items: center;
-    padding: 50px;
+    flex-direction: column; /* Esto hace que la tienda quede ABAJO del hero */
+    gap: 50px;
+    padding: 50px 20px;
 }
 
+/* Sección del Hero */
 .hero-section {
     display: flex;
     align-items: center;
@@ -70,6 +72,7 @@ main {
     gap: 50px;
     max-width: 1200px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .hero-content {
@@ -92,7 +95,6 @@ main {
     margin-bottom: 30px;
 }
 
-/* Botón de acción (Mismo estilo dinámico que el botón del login) */
 .btn-main {
     display: inline-block;
     background: transparent;
@@ -109,7 +111,7 @@ main {
 .btn-main:hover {
     background: #ff0055;
     box-shadow: 0 0 15px #ff0055;
-    transform: scale(1.05); /* Toque dinámico gamer idéntico al login */
+    transform: scale(1.05);
 }
 
 .hero-image {
@@ -117,7 +119,6 @@ main {
     text-align: center;
 }
 
-/* Imagen con los dos bordes neón del contenedor de login */
 .hero-image img {
     max-width: 100%;
     height: auto;
@@ -128,29 +129,17 @@ main {
     box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
 }
 
-/* Estilos del Pie de Página */
-footer {
-    background-color: #1a1a1a;
-    text-align: center;
-    padding: 20px;
-    color: #626875;
-    font-size: 14px;
-    border-top: 1px solid #333;
-}
-
-/* Estilos para la parte de sección */
-
+/* Sección de Categorías Destacadas (Tienda) */
 .store-categories {
-    padding: 50px;
-    background-color: #0d0d0d; /* Fondo oscuro base */
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .category-grid {
     display: flex;
     justify-content: space-between;
     gap: 40px;
-    max-width: 1400px;
-    margin: 0 auto;
 }
 
 .category-column {
@@ -165,7 +154,7 @@ footer {
     text-transform: uppercase;
     letter-spacing: 1px;
     margin-bottom: 5px;
-    text-shadow: 0 0 8px #00d4ff; /* Neón Cian */
+    text-shadow: 0 0 8px #00d4ff;
 }
 
 .category-subtitle {
@@ -182,21 +171,22 @@ footer {
 }
 
 .game-card {
-    background-color: #1a1a1a; /* Fondo tarjeta login */
+    background-color: #1a1a1a;
     border: 1px solid #333;
     transition: 0.3s;
     overflow: hidden;
 }
 
 .game-card:hover {
-    border-color: #ff0055; /* Borde rosa al hover */
+    border-color: #ff0055;
     transform: translateY(-3px);
     box-shadow: 0 5px 15px rgba(255, 0, 85, 0.2);
 }
 
 .game-card img {
     width: 100%;
-    height: auto;
+    height: 120px;
+    object-fit: cover;
     display: block;
 }
 
@@ -209,7 +199,7 @@ footer {
 }
 
 .discount {
-    background-color: #a3d200; /* Verde Steam original */
+    background-color: #a3d200;
     color: #000;
     font-weight: bold;
     padding: 2px 5px;
@@ -223,15 +213,15 @@ footer {
 }
 
 .final-price {
-    color: #acdbf5; /* Cian suave para el precio */
+    color: #acdbf5;
     font-weight: bold;
 }
 
 .btn-more {
-    align-self: flex-end; /* Alinear a la derecha como en image_f85619.jpg */
+    align-self: flex-end;
     background: transparent;
     color: #fff;
-    border: 2px solid #ff0055; /* Borde rosa neón login */
+    border: 2px solid #ff0055;
     padding: 10px 20px;
     cursor: pointer;
     text-transform: uppercase;
@@ -241,7 +231,17 @@ footer {
 }
 
 .btn-more:hover {
-    background: #ff0055; /* Fondo rosa login */
+    background: #ff0055;
     box-shadow: 0 0 15px #ff0055;
-    transform: scale(1.05); /* Efecto dinámico login */
+    transform: scale(1.05);
+}
+
+/* Pie de Página */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    color: #626875;
+    font-size: 14px;
+    border-top: 1px solid #333;
 }
