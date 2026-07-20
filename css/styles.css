@@ -137,3 +137,111 @@ footer {
     font-size: 14px;
     border-top: 1px solid #333;
 }
+
+/* Estilos para la parte de sección */
+
+.store-categories {
+    padding: 50px;
+    background-color: #0d0d0d; /* Fondo oscuro base */
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.category-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-title {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px #00d4ff; /* Neón Cian */
+}
+
+.category-subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.game-card {
+    background-color: #1a1a1a; /* Fondo tarjeta login */
+    border: 1px solid #333;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    border-color: #ff0055; /* Borde rosa al hover */
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.price-tag {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.discount {
+    background-color: #a3d200; /* Verde Steam original */
+    color: #000;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin-right: 10px;
+}
+
+.original-price {
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.final-price {
+    color: #acdbf5; /* Cian suave para el precio */
+    font-weight: bold;
+}
+
+.btn-more {
+    align-self: flex-end; /* Alinear a la derecha como en image_f85619.jpg */
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff0055; /* Borde rosa neón login */
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.4s;
+    font-size: 12px;
+}
+
+.btn-more:hover {
+    background: #ff0055; /* Fondo rosa login */
+    box-shadow: 0 0 15px #ff0055;
+    transform: scale(1.05); /* Efecto dinámico login */
+}
