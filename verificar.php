@@ -12,7 +12,7 @@ if ($usuario === $usuario_permitido && $password === $password_permitido) {
     // Si es correcto, iniciamos sesión y redirigimos
     session_start();
     $_SESSION['usuario'] = $usuario;
-    header("Location: inicio.php");
+    header("Location: index.html");
     exit();
 } else {
     // Si falla, volvemos al login con un mensaje (puedes añadir un parámetro GET para el error)

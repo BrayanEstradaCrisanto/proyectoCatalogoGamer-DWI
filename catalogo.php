@@ -7,12 +7,14 @@ if (!isset($_SESSION['usuario'])) {
 ?>
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo Completo - Catálogo Gamer</title>
-    <link rel="stylesheet" href="assets/css/index.css">
+    <link rel="stylesheet" href="css/catalogo.css">
 </head>
+
 <body class="catalog-body">
 
     <!-- Cabecera -->
@@ -38,13 +40,13 @@ if (!isset($_SESSION['usuario'])) {
 
     <!-- Lógica de la API y Renderizado -->
     <script>
-        const urlAPI = 'https://api.allorigins.win/raw?url=' + encodeURIComponent('https://www.freetogame.com/api/games');
+        const urlAPI = 'https://www.freetogame.com/api/games';
         let listaGlobalJuegos = [];
 
         async function obtenerCatalogoCompleto() {
             const contenedor = document.getElementById('contenedor-juegos');
             contenedor.innerHTML = '<p style="color: #00ff41; grid-column: 1 / -1; text-align: center; font-size: 1.2rem;">CARGANDO BIBLIOTECA DE JUEGOS...</p>';
-            
+
             try {
                 const respuesta = await fetch(urlAPI);
                 listaGlobalJuegos = await respuesta.json();
@@ -87,8 +89,8 @@ if (!isset($_SESSION['usuario'])) {
         // Buscador en tiempo real
         document.getElementById('buscador').addEventListener('input', (e) => {
             const textoBusqueda = e.target.value.toLowerCase();
-            const juegosFiltrados = listaGlobalJuegos.filter(juego => 
-                juego.title.toLowerCase().includes(textoBusqueda) || 
+            const juegosFiltrados = listaGlobalJuegos.filter(juego =>
+                juego.title.toLowerCase().includes(textoBusqueda) ||
                 juego.genre.toLowerCase().includes(textoBusqueda)
             );
             mostrarJuegos(juegosFiltrados);
@@ -97,4 +99,5 @@ if (!isset($_SESSION['usuario'])) {
         obtenerCatalogoCompleto();
     </script>
 </body>
+
 </html>
