@@ -1,0 +1,247 @@
+/* Configuración General */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+body {
+    background-color: #0d0d0d;
+    color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos del Menú Principal */
+header {
+    background-color: #1a1a1a;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid #ff0055;
+    box-shadow: 0 4px 15px rgba(0, 212, 255, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 10px #ff0055;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #a0a5b5;
+    text-decoration: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #00d4ff;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+/* Estilos del Main (Apilado vertical) */
+main {
+    flex: 1;
+    display: flex;
+    flex-direction: column; /* Esto hace que la tienda quede ABAJO del hero */
+    gap: 50px;
+    padding: 50px 20px;
+}
+
+/* Sección del Hero */
+.hero-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    text-shadow: 0 0 15px #ff0055;
+}
+
+.welcome-text {
+    font-size: 18px;
+    color: #a0a5b5;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.btn-main {
+    display: inline-block;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff0055;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.btn-main:hover {
+    background: #ff0055;
+    box-shadow: 0 0 15px #ff0055;
+    transform: scale(1.05);
+}
+
+.hero-image {
+    flex: 1;
+    text-align: center;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    background: #1a1a1a;
+    padding: 10px;
+    border-left: 5px solid #ff0055;
+    border-right: 5px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.3);
+}
+
+/* Sección de Categorías Destacadas (Tienda) */
+.store-categories {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.category-grid {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.category-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.category-title {
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 0 0 8px #00d4ff;
+}
+
+.category-subtitle {
+    color: #888;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+.games-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.game-card {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    transition: 0.3s;
+    overflow: hidden;
+}
+
+.game-card:hover {
+    border-color: #ff0055;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 0, 85, 0.2);
+}
+
+.game-card img {
+    width: 100%;
+    height: 120px;
+    object-fit: cover;
+    display: block;
+}
+
+.price-tag {
+    display: flex;
+    align-items: center;
+    background-color: #000;
+    padding: 10px;
+    font-size: 14px;
+}
+
+.discount {
+    background-color: #a3d200;
+    color: #000;
+    font-weight: bold;
+    padding: 2px 5px;
+    margin-right: 10px;
+}
+
+.original-price {
+    color: #888;
+    text-decoration: line-through;
+    margin-right: 10px;
+}
+
+.final-price {
+    color: #acdbf5;
+    font-weight: bold;
+}
+
+.btn-more {
+    align-self: flex-end;
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff0055;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: 0.4s;
+    font-size: 12px;
+}
+
+.btn-more:hover {
+    background: #ff0055;
+    box-shadow: 0 0 15px #ff0055;
+    transform: scale(1.05);
+}
+
+/* Pie de Página */
+footer {
+    background-color: #1a1a1a;
+    text-align: center;
+    padding: 20px;
+    color: #626875;
+    font-size: 14px;
+    border-top: 1px solid #333;
+}
