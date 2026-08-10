@@ -1,0 +1,120 @@
+body.profile-body {
+    background-color: #0d0d0d;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    color: #fff;
+}
+
+.profile-container {
+    background: #1a1a1a;
+    width: 380px;
+    padding: 2.5rem;
+    border-left: 5px solid #ff0055;
+    border-right: 5px solid #00d4ff;
+    box-shadow: 0 0 20px rgba(0, 212, 255, 0.25);
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.profile-title {
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 2rem;
+    text-shadow: 0 0 10px #ff0055;
+    font-size: 1.4rem;
+}
+
+.info-card {
+    background: #000;
+    border: 1px solid #333;
+    padding: 1.2rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+    border-radius: 4px;
+    transition: border-color 0.3s;
+}
+
+.info-card:hover {
+    border-color: #00d4ff;
+}
+
+.info-row {
+    color: #aaa;
+    font-size: 0.88rem;
+    margin: 0 0 0.6rem 0;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.label-title {
+    color: #aaa;
+    font-size: 0.8rem;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.val-online {
+    color: #00ff41;
+    font-weight: bold;
+}
+
+.val-user {
+    color: #00d4ff;
+    font-weight: bold;
+}
+
+.val-role {
+    color: #ff0055;
+    font-weight: bold;
+}
+
+.val-text {
+    color: #fff;
+}
+
+.btn-profile {
+    display: block;
+    width: 100%;
+    padding: 0.9rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-size: 0.85rem;
+    transition: 0.3s;
+}
+
+.btn-catalog {
+    background: transparent;
+    color: #00d4ff;
+    border: 2px solid #00d4ff;
+}
+
+.btn-catalog:hover {
+    background: #00d4ff;
+    color: #000;
+    box-shadow: 0 0 12px #00d4ff;
+    transform: scale(1.03);
+}
+
+.btn-logout-profile {
+    background: transparent;
+    color: #fff;
+    border: 2px solid #ff0055;
+}
+
+.btn-logout-profile:hover {
+    background: #ff0055;
+    box-shadow: 0 0 15px #ff0055;
+    transform: scale(1.03);
+}
