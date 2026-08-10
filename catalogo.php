@@ -23,6 +23,7 @@ if (!isset($_SESSION['usuario'])) {
         <div>
             <span class="user-info">Usuario: <?php echo htmlspecialchars($_SESSION['usuario']); ?></span>
             <a href="logout.php" class="btn-logout">Cerrar Sesión</a>
+            <a href="index.html" class="btn-logout">Regresar</a>
         </div>
     </header>
 
